@@ -14,7 +14,7 @@ use Zend\Stdlib\Hydrator\ClassMethods;
  * Wrote a simple wrapper to faster initialize an AggregateHydrator because I can!
  *
  * <code>
- * $foo = new AggregateHydrator(
+ * $foo = new \Sam\Hydrator\AggregateHydrator(
  *     new ClassMethods(),
  *     new OneToOneHydrator('foo_', 'setFoo', new Foo()),
  *     new OneToOneHydrator('bar_', 'setBar', new Bar())
@@ -29,41 +29,20 @@ final class AggregateHydrator extends BaseAggregateHydrator
     protected $hydratorChain = [];
 
     /**
-     * Constructor is used to pass all relevant parts of the aggregate hydrator 
+     * Constructor is used to pass all relevant parts of the aggregate hydrator
      *
      * @throws \InvalidArgumentException when
      */
     public function __construct()
     {
-        $passedHydrators = func_get_args();
-
-        for ($i = 0; $i < func_num_args(); $i++) {
-            $this->hydratorChain[$i] = $passedHydrators[$i];
-        }
-
-        if (0 === count($passedHydrators)) {
+        if (0 === func_num_args()) {
             throw new \InvalidArgumentException(
                 'Add at least one instance of an HydratorInterface to the AggregateHydrator.'
             );
         }
-    }
 
-    /**
-     * Run the aggregated hydrator to receive a nice awesome object
-     *
-     * @param array  $data
-     * @param object $object
-     *
-     * @return object
-     */
-    public function hydrate(array $data, $object)
-    {
-        $baseHydrator = new BaseAggregateHydrator();
-
-        foreach ($this->hydratorChain as $hydrator) {
-            $baseHydrator->add($hydrator);
+        foreach (func_get_args() as $hydrator) {
+            $this->add($hydrator);
         }
-
-        return $baseHydrator->hydrate($data, $object);
     }
 }
