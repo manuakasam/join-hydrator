@@ -10,8 +10,8 @@
     "join",
     "join-hydrator",
     "tablegateway",
-    "zend\\db",
-    "zend\\stdlib\\hydrator"
+    "zend-db",
+    "zend-stdlib"
   ],
   "authors": [
     {
