@@ -25,8 +25,6 @@ use Zend\Stdlib\Hydrator\Aggregate\AggregateHydrator as BaseAggregateHydrator;
  */
 final class AggregateHydrator extends BaseAggregateHydrator
 {
-    protected $hydratorChain = [];
-
     /**
      * Constructor is used to pass all relevant parts of the aggregate hydrator
      *
