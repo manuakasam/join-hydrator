@@ -22,7 +22,7 @@
     }
   ],
   "require": {
-    "php": ">=5.3.23",
+    "php": ">=5.4",
     "zendframework/zend-eventmanager": "2.*",
     "zendframework/zend-filter": "2.*",
     "zendframework/zend-servicemanager": "2.*",
