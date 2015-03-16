@@ -20,7 +20,7 @@ use Zend\Stdlib\Hydrator\ClassMethods;
  *   'bar_two' => 'BAR_2Ä
  * ];
  *
- * $hydrator = new AggregateHydrator();
+ * $hydrator = new \Zend\Stdlib\AggregateHydrator();
  * $hydrator->add(new OneToOneHydrator('foo_', 'setFoo', new Foo()));
  * $hydrator->add(new OneToOneHydrator('bar_', 'setBar', new Bar()));
  *
@@ -44,7 +44,6 @@ use Zend\Stdlib\Hydrator\ClassMethods;
  *       string(5) "BAR_2"
  *   }
  * }
-
  * </code>
  *
  * @author  Manuel Stosic <manuel.stosic@krankikom.de>
