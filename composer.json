@@ -1,9 +1,9 @@
 {
-  "name":         "manuakasam/join-hydrator",
-  "description":  "A set of two very lightweight hydrator components. The main usage of those hydrators would be to hydrate query results from joined tables into their respective nested objects.",
-  "type":         "library",
-  "license":      "BSD-3-Clause",
-  "homepage":     "https://samminds.com",
+  "name": "manuakasam/join-hydrator",
+  "description": "A set of two very lightweight hydrator components. The main usage of those hydrators would be to hydrate query results from joined tables into their respective nested objects.",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "homepage": "https://samminds.com",
   "keywords": [
     "zf2",
     "hydrator",
@@ -15,10 +15,10 @@
   ],
   "authors": [
     {
-      "name":      "Manuel Stosic",
-      "email":     "manuakasam@gmail.com",
-      "homepage":  "http://samminds.com/",
-      "role":      "Developer"
+      "name": "Manuel Stosic",
+      "email": "manuakasam@gmail.com",
+      "homepage": "http://samminds.com/",
+      "role": "Developer"
     }
   ],
   "require": {

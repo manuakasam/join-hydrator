@@ -6,7 +6,6 @@
 namespace Sam\Hydrator;
 
 use Zend\Stdlib\Hydrator\Aggregate\AggregateHydrator as BaseAggregateHydrator;
-use Zend\Stdlib\Hydrator\ClassMethods;
 
 /**
  * Class AggregateHydrator
