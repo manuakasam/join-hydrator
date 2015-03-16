@@ -11,8 +11,8 @@ before_script:
   - composer update --prefer-source
 
 script:
-  - ./vendor/bin/phpunit -c ./tests/phpunit.xml --coverage-clover ./build/logs/clover.xml
-  - ./vendor/bin/phpcs --standard=PSR2 ./src/ ./tests/
+  - ./vendor/bin/phpunit -c ./test/phpunit.xml --coverage-clover ./build/logs/clover.xml
+  - ./vendor/bin/phpcs --standard=PSR2 ./src/ ./test/
 
 after_script:
   - php vendor/bin/coveralls -v
