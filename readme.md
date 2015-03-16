@@ -81,7 +81,7 @@ namespace Test {
         new ClassMethods(),
         new OneToOneHydrator('foo_', 'setFoo', new Foo()),
         new OneToOneHydrator('bar_', 'setBar', new Bar())
-    ));
+    ), new Dummy());
     
     $gateway   = new TableGateway('dummies', $adapter, null, $prototype);
 
